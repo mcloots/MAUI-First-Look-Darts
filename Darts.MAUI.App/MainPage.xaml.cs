@@ -11,13 +11,14 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+		count+=5;
 
 		if (count == 1)
 			CounterBtn.Text = $"Clicked {count} time";
 		else
 			CounterBtn.Text = $"Clicked {count} times";
 
+		// For screen reader software
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
 }
